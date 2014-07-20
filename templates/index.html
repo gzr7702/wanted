@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=end ng-app='ufApp'>
+ <head>
+    <meta charset="UTF-8">
+    <title>Univers's Most Wanted</title>
+    <script type="text/javascript" src="static/lib/angular/angular.min.js"></script>
+    <script src="static/js/controllers.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="static/img/favicon.ico">
+ </head>
+ <body>
+    <div class="main" ng-controller="UfController">
+        <div class="search">
+            <h1>Universe's Most Wanted</h1>
+            <input ng-model="query" placeholder="Search for Friends" autofocus>
+            <label class="formgroup">sort by
+                <select ng-model="fileOrder">
+                    <option value="surname">Last Name</option>
+                    <option value="givenname">First Name</option>
+                    <option value="gender">Gender</option>
+                    <option value="centimeters">Height</option>
+                    <option value="kilograms">Weight</option>
+                    <option value="vehicle">Vehicle</option>
+                </select>
+            </label>
+            <label class="formgroup">
+                <input type="radio" ng-model="direction" name="direction" checked>
+                ascending
+            </label>
+            <label class="formgroup">by
+                <input type="radio" ng-model="direction" name="direction" value="reverse">
+                descending
+            </label>
+        </div>
+        <table class="filelist">
+            <tr class="file"><th>Last Name</th><th>First Name</th><th>Gender</th><th>Height</th><th>Weight</th><th>Vehicle</th></tr>
+            <div>
+            <tr class="file" ng-repeat="item in files | filter: query | orderBy: fileOrder:direction">
+                <td>{{ item.surname }}</td><td>{{ item.givenname }}</td><td>{{ item.gender }}</td><td>{{ item.centimeters }}</td><td>{{ item.kilograms }}</td><td>{{ item.vehicle }}</td></tr>
+            </div>
+        </table>
+    </div>
+ </body>
+</html>

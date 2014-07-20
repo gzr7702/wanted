@@ -1,0 +1,78 @@
+body { 
+    font-family: sans-serif;
+    background: #eee;
+}
+
+.search { background: #4660BC;
+  color: black;
+  width: 90%;
+  min-width: 500;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  z-index: 20;
+}
+
+.search h1 {
+    color: black;
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+
+.search input {
+  font-family: 'Droid Sans', sans-serif;
+  width: 100%;
+  padding: 10px 0 10px 15px;
+  font-size: 1rem;
+  color: black;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.search .formgroup input {
+  border: 1px solid rgba(0,0,0,0.3);
+  display: inline;
+  width: auto;
+}
+
+.search label.formgroup {
+  display: inline;
+  width: auto;
+}
+
+.search select {
+  display: inline;
+  padding: 10px 0 10px 15px;
+  font-size: 1rem;
+  color: #475B62;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.filelist {
+  background: #E6E5F2;
+  width: 100%;
+  min-width: 800px;
+  max-width:1000px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 0 0 20px 20px;
+  opacity: .95;
+  z-index: 10;
+  font-size: 1.2em;
+}
+
+.filelist td {
+  padding: 10px 20px;
+}
+
+.head {
+    padding: 10px 20px;
+    font-weight: bold;
+}
