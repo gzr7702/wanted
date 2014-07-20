@@ -32,7 +32,7 @@ def close_db(error):
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()
 
-@app.route('/ufdata')
+@app.route('/wanteddata')
 def get_entries():
     db = get_db()
     print("getting data")

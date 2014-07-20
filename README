@@ -1,5 +1,15 @@
-This is a basic template for running an SPA app w/Angularjs wiht Flask as the backend.
+This is a basic template for running an SPA app w/Angularjs using Flask as the backend.
+For some reason, I didn't find many examples of how to pull data from a datbase to send to
+the Angular controller. So, here you go. I hope this helps someone out.
 
-Dependant on Python 3.2. I left out the Angular library, so you'll have to add your own.
+All the magic happens in app.py in get_entries(). First, the $http service from Angular 
+calls for the page /wanteddata. Flask responds by running get_entries(). It grabs all the 
+data in a table, creates a dictionary of columns:data, turns that into JSON, then returns
+the JSON to the controller where Angular takes back control.
 
-To start, run python app.py
+- Uses Python 3.3. 
+- The Angular min library is in static/lib/angular. You might want to replace that
+    with a more recent version. Or not.
+- Left in a single table sqlite database of random names and other data so you can get started.
+
+To start, simply run python app.py
