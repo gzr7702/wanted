@@ -1,7 +1,7 @@
 import os
 import sqlite3
 import json
-from flask import Flask, g, make_response
+from flask import Flask, g, make_response, render_template
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -44,7 +44,9 @@ def get_entries():
 
 @app.route('/')
 def home():
-    return make_response(open('templates/index.html').read())
+    #return make_response(open('index.html').read())
+    return render_template('index.html')
+    #return "hello"
 
 if __name__ == '__main__':
     app.run()

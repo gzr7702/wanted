@@ -1,6 +1,6 @@
-var ufApp = angular.module('WantedApp', []);
+var wantedApp = angular.module('WantedApp', []);
 
-ufApp.controller('WantedController', ['$scope', '$http', function($scope, $http) {
+wantedApp.controller('WantedController', ['$scope', '$http', function($scope, $http) {
     $http.get('/wanteddata').success(function(data) {
         $scope.files = data;
         $scope.fileOrder = 'surname';
